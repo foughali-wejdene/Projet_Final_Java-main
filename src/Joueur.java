@@ -2,24 +2,17 @@
 
 public class Joueur{
 	String nom;
-	String password;
 	int credit;
 	int pos;
 
-	public Joueur(String nom, String password){
+	public Joueur(String nom){
 		this.nom=nom;
-		credit=20000;
-		pos=-1;
-		this.password=password;
 		credit=20000;
 		pos=-1;
 	}
 
 	public String getNom(){
 		return(nom);
-	}
-	public String getpassword(){
-		return(password);
 	}
 
 	public int getPos(){
@@ -42,7 +35,7 @@ public class Joueur{
 	}
 
 	public boolean equals(Joueur j){
-		return (nom.equals(j.nom) && (password.equals(j.password) &&credit==j.credit));
+		return (nom.equals(j.nom) && credit==j.credit);
 	}
 
 	public void paye(int loyer){
